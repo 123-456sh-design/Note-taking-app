@@ -1,0 +1,148 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+:root{
+    --background-color: #fac7dd;
+    --text-color: #f58798;
+}
+
+.dark-mode{
+    --background-color: black;
+    --text-color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 20px 30px;
+    color: var(--text-color);
+}
+
+.container h1{
+    display: flex;
+    align-items: center;
+    font-size: 35px
+}
+
+.container h1 img{
+    width: 60px;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.create-note{
+    background: linear-gradient(#f58798,#eca4c2);
+    color: white;
+    padding: 15px 45px;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.note{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 400px;
+}
+
+.delete-icon{
+    position: relative;
+    width: 25px;
+    left: 365px;
+    top: -35px;
+    cursor: pointer;
+}
+
+.edit-icon{
+    position: relative;
+    width: 25px;
+    left: 335px;
+    top: -60px;
+    cursor: pointer;
+}
+
+.save-icon{
+    position: relative;
+    width: 60px;
+    left: 265px;
+    top: -100px;
+    cursor: pointer;
+}
+
+.create-note:hover,
+.delete-icon:hover,
+.edit-icon:hover,
+.save-icon:hover,
+.dark-mode-btn:hover{
+    transform: scale(0.9);
+}
+
+.note-category{
+    width: 200px;
+    outline: none;
+    margin-bottom: 5px;
+    outline: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #ffedf8;
+    border-radius: 20px;
+}
+
+.input-notes{
+    resize: none;
+    min-height: 150px;
+    outline: none;
+    background-color: #ffedf8;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.dark-mode-btn{
+    background: linear-gradient(#f58798,#eca4c2);
+    color: white;
+    padding: 15px 45px;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+}
+
+@media (max-width: 455px){
+    .save-icon{
+        left: 165px;
+    }
+    .edit-icon{
+        left: 235px;
+    }
+    .delete-icon{
+        left: 265px;
+    }
+}
